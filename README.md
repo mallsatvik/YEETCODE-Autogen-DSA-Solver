@@ -1,32 +1,32 @@
-📘 YEETCODE – Agentic DSA Solver
+YEETCODE – Agentic DSA Solver
 
 YEETCODE is an AI-powered Data Structures & Algorithms problem solver built with:
 
-🤖 Microsoft Autogen (multi-agent orchestration)
+Microsoft Autogen (multi-agent orchestration)
 
-🦙 Ollama Mistral (local LLM backend)
+Ollama Mistral (local LLM backend)
 
-🐳 Docker (safe sandbox for code execution)
+Docker (safe sandbox for code execution)
 
-🖥️ Streamlit (interactive UI)
+Streamlit (interactive UI)
 
 YEETCODE can:
 
-Take a DSA problem statement (input by user).
+Take a DSA problem statement as input.
 
-Use an AI Problem Solver agent (Mistral) to:
+Use an AI Problem Solver agent (powered by Mistral) to:
 
 Plan a solution
 
-Write Python code + test cases
+Write Python code and test cases
 
 Ask the Code Executor agent to run the code in Docker
 
 Save the solution to a .py file
 
-Stop automatically once the task is done.
+End the loop automatically once the task is complete.
 
-🚀 Demo (example run)
+Example Run
 user : Write a Python code to reverse a linked list.
 DSA_Problem_Solver_Agent :
 Plan: I will implement a LinkedList class with a reverse method.
@@ -34,43 +34,48 @@ Plan: I will implement a LinkedList class with a reverse method.
 STOP
 
 
-✅ Code is saved in linked_list_reverse.py
-✅ Tests executed inside Docker
-✅ Task marked complete
+Result:
 
-🛠 Tech Stack
+Code saved in linked_list_reverse.py
 
-LLM Orchestration: Autogen
+Tests executed inside Docker
 
-LLM Backend: Ollama Mistral
- (local, no API costs)
+Task completed
 
-Execution Sandbox: Docker (isolated code runs)
+Tech Stack
 
-Frontend: Streamlit
+Autogen (agent orchestration)
 
-📂 Project Structure
+Ollama Mistral (local LLM model)
+
+Docker (sandbox execution)
+
+Streamlit (UI)
+
+Python 3.10+
+
+Project Structure
 YEETCODE/
 │── agents/
-│   ├── problem_solver.py      # DSA solver agent
-│   ├── code_executor_agent.py # Executes code in Docker
+│   ├── problem_solver.py
+│   ├── code_executor_agent.py
 │
 │── team/
-│   └── dsa_team.py            # Round-robin group chat config
+│   └── dsa_team.py
 │
 │── config/
-│   ├── settings.py            # Model client (Ollama / Autogen)
-│   ├── constant.py            # Config: MODEL, STOP token, etc.
-│   ├── docker_utils.py        # Start/stop Docker helpers
-│   └── docker_executor.py     # Docker code executor
+│   ├── settings.py
+│   ├── constant.py
+│   ├── docker_utils.py
+│   └── docker_executor.py
 │
-│── main.py                    # CLI entrypoint
-│── app.py                     # Streamlit UI
+│── main.py          # CLI entrypoint
+│── app.py           # Streamlit UI
 │── requirements.txt
 │── .gitignore
 
-⚡ Installation & Setup
-1. Clone the repo
+Installation and Setup
+1. Clone the repository
 git clone https://github.com/mallsatvik/YEETCODE-Agentic-DSA-Solver.git
 cd YEETCODE-Agentic-DSA-Solver
 
@@ -85,59 +90,57 @@ pip install -r requirements.txt
 
 4. Setup .env
 
-Create a .env file in project root:
+Create a .env file in the project root:
 
 # Ollama local server (OpenAI-compatible endpoint)
 OLLAMA_BASE_URL=http://localhost:11434/v1
 
-5. Install Ollama + Mistral
+5. Install Ollama and Mistral
 
-Download Ollama
+Download Ollama: https://ollama.com/download
 
-Run:
+Pull the model and start the server:
 
 ollama pull mistral
 ollama serve
 
 6. Run the solver
 
-CLI mode:
+Run in CLI mode:
 
 python main.py
 
 
-Web UI (Streamlit):
+Run with the Streamlit UI:
 
 streamlit run app.py
 
-🎯 Features
+Features
 
-🔄 Multi-agent loop (Planner + Executor)
+Multi-agent loop (Planner + Executor)
 
-✅ Automatic test cases generation
+Automatic test case generation
 
-💾 Saves code to .py files
+Saves solutions to .py files
 
-🛡️ Sandboxed Docker execution
+Sandboxed Docker execution
 
-🖼️ Clean Streamlit interface
+Streamlit user interface
 
-📌 Roadmap
+Roadmap
 
- Add Judge agent for ✅ / ❌ test reporting
+Add Judge agent for test pass/fail reporting
 
- Add support for C++ / Java execution
+Add support for C++ and Java execution
 
- Add problem loaders (LeetCode, Codeforces)
+Add problem loaders (LeetCode, Codeforces)
 
- Add metrics dashboard (success rate, iterations)
+Add metrics dashboard (success rate, iterations)
 
-🤝 Contributing
+Contributing
 
-Pull requests are welcome! Please open an issue first to discuss major changes.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-📜 License
+License
 
 MIT License. See LICENSE for details.
-
-✨ Built with love by @mallsatvik
