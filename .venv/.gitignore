@@ -1,0 +1,10 @@
+# Virtual environment
+.venv/
+__pycache__/
+
+# Secrets
+.env
+
+# Temp folders
+temp/
+
